@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JS-RPG</title>
+  <link id="css" rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+</head>
+<body>
+
+<h2 id="jsRpgTitle">
+JS-RPG
+<a><img id="darkTheme" onclick="darkTheme();" src="images/moon-32.png" alt="Dark Theme"></a>
+</h2>
+
+<div id="player1Tab">
+<p id="left">
+<u>Player 1</u> <br>
+Name: <b><span id="p1"></span></b><br>
+HP: <span id="player1Hp">100</span>
+</p>
+</div>
+
+<div id="player2Tab">
+<p id="right">
+<u>Player 2</u> <br>
+Name: <b><span id="p2"></span></b><br>
+HP: <span id="player2Hp">100</span>
+</p>
+</div>
+
+<div id="rulesTab">
+<p id="center">
+<u>Rules</u> <br>
+<span id="hpValue">HP: 100</span>&nbsp;<button id="changeButton" onclick="changeHpValue();">Change</button><br>
+<span id="maxDamageValue">Maximum damage per attack: 30</span>&nbsp;<button id="changeButton2" onclick="changeMaxDamageValue();">Change</button><br>
+<span id="healingValue">Healing is on </span><button id="healingButton" onclick="changeHealingOnOff();">Disable</button>
+</p>
+</div>
+
+<br>
+
+<div id="start">
+<form>
+<input type="button" id="startButton" value="Start Game" onclick="gameStart();"/>
+</form>
+</div>
+
+<br>
+
+<div id="attackBlock">
+<p id="pickFirst"></p>
+<br>
+<div id="inputBar">
+Attack name: <input type="text" id="attackName" value="sample text">
+Amount of damage: <input type="text" id="damageAmount" value="10">
+<br>
+<button id="attackButton" onclick="useAttack();">Use attack</button>
+<br>
+<p id="attackP"></p>
+</div>
+<div id="nextTurn">
+<button id="nextButton" onclick="turnDone();">Next turn</button>
+</div>
+</div>
+
+<h4 id="footer" class="footer">
+Made with ❤ by <a href="http://luuknoverraz.nl" target="_blank">Luuk Noverraz </a><a href="https://github.com/CoderClassLuuk"><img id="github" src="images/github-icon.png" height="14" width="16" alt="Github"></a>
+</h4>
+
+<script src="main.js"></script>
+</body>
+</html>

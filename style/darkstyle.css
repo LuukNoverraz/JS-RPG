@@ -1,0 +1,138 @@
+body {
+  background-color: #2a292d;
+}
+#jsRpgTitle {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #f9f9f9;
+}
+#darkTheme {
+    float: right;
+}
+a:link {
+    color: #111047;
+}
+a:visited {
+    color: #121235;
+}
+a:hover {
+    color: #212166
+}
+a:active {
+    color: #2a2a84;
+}
+#player1Tab {
+    float: left;
+}
+#player2Tab {
+    float: right;
+}
+#left {
+    background-color: #ff9b9b;
+    border-radius: 25px;
+    border: 3px solid #ff4f4f;
+    padding: 10px;
+    text-align: center;
+    color: #ce3333;
+    font-family: 'Open Sans', sans-serif;
+}
+#center {
+    background-color: #424244;
+    border-radius: 25px;
+    border: 3px solid #f9f9f9;
+    color: #f9f9f9;
+    width: 15%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+#right {
+    background-color: #a68cff;
+    border-radius: 25px;
+    border: 3px solid #7a51ff;
+    padding: 10px;
+    text-align: center;
+    color: #6133f7;
+    font-family: 'Open Sans', sans-serif;
+}
+#start {
+    margin: auto;
+    text-align: center;
+    width: 10%;
+    font-family: 'Open Sans', sans-serif;
+}
+#startButton {
+  border-radius: 9px;
+  background-color: #f9f9f9;
+  color: #2a292d;
+  border: 2px solid #f9f9f9;
+}
+#attackButton {
+  border-radius: 9px;
+  background-color: #f9f9f9;
+  color: #2a292d;
+  border: 2px solid #2a292d;
+}
+#pickFirst {
+    margin: auto;
+    text-align: center;
+    width: 10%;
+    font-family: 'Open Sans', sans-serif;
+    color: #f9f9f9;
+}
+#changeButton {
+  border-radius: 9px;
+  background-color: #f9f9f9;
+  color: #2a292d;
+  border: 1px solid #f9f9f9;
+}
+#changeButton2 {
+  border-radius: 9px;
+  background-color: #f9f9f9;
+  color: #2a292d;
+  border: 1px solid #f9f9f9;
+}
+#healingButton {
+  border-radius: 9px;
+  background-color: #f9f9f9;
+  color: #2a292d;
+  border: 1px solid #f9f9f9;
+}
+#inputBar {
+  opacity: 0.0;
+  margin: auto;
+  text-align: center;
+  color: #f9f9f9;
+  width: 10%;
+  font-family: 'Open Sans', sans-serif;
+}
+#nextButton {
+  border-radius: 9px;
+  background-color: #f9f9f9;
+  color: #2a292d;
+  border: 2px solid #f9f9f9;
+}
+#nextTurn {
+  opacity: 0.0;
+  margin-left: 47.5%;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3%;
+    background-color: #2a292d;
+    transition: all 0.3s cubic-bezier(0,0,0,0.22);
+    color: white;
+    text-align: center;
+}
+.footer:hover {
+    transform: translateY(-50%);
+}
+#footer {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #2a292d;
+}

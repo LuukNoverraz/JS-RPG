@@ -1,0 +1,133 @@
+#jsRpgTitle {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+#darkTheme {
+    float: right;
+}
+a:link {
+    color: #c1edff;
+}
+a:visited {
+    color: #b4daea;
+}
+a:hover {
+    color: #d9f1fc;
+}
+a:active {
+    color: #d7e8ef;
+}
+#player1Tab {
+    float: left;
+}
+#player2Tab {
+    float: right;
+}
+#left {
+    background-color: #ff6868;
+    border-radius: 25px;
+    border: 3px solid #f73131;
+    padding: 10px;
+    text-align: center;
+    color: #591313;
+    font-family: 'Open Sans', sans-serif;
+}
+#center {
+    background-color: #848689;
+    border-radius: 25px;
+    border: 3px solid #2a292d;
+    width: 15%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+#right {
+    background-color: #805afc;
+    border-radius: 25px;
+    border: 3px solid #3a12bc;
+    padding: 10px;
+    text-align: center;
+    color: #18074f;
+    font-family: 'Open Sans', sans-serif;
+}
+#start {
+    margin: auto;
+    text-align: center;
+    width: 10%;
+    font-family: 'Open Sans', sans-serif;
+}
+#startButton {
+  border-radius: 9px;
+  background-color: #2a292d;
+  color: #f9f9f9;
+  border: 2px solid #2a292d;
+}
+#attackButton {
+  border-radius: 9px;
+  background-color: #2a292d;
+  color: #f9f9f9;
+  border: 2px solid #f9f9f9;
+}
+#pickFirst {
+    margin: auto;
+    text-align: center;
+    width: 10%;
+    font-family: 'Open Sans', sans-serif;
+}
+#changeButton {
+  border-radius: 9px;
+  background-color: #2a292d;
+  color: #f9f9f9;
+  border: 1px solid #2a292d;
+}
+#changeButton2 {
+  border-radius: 9px;
+  background-color: #2a292d;
+  color: #f9f9f9;
+  border: 1px solid #2a292d;
+  transition: all 0.3s cubic-bezier(0,0,0,0.22);
+}
+#healingButton {
+  border-radius: 9px;
+  background-color: #2a292d;
+  color: #f9f9f9;
+  border: 1px solid #2a292d;
+}
+#inputBar {
+  opacity: 0.0;
+  margin: auto;
+  text-align: center;
+  width: 10%;
+  font-family: 'Open Sans', sans-serif;
+}
+#nextButton{
+  border-radius: 9px;
+  background-color: #2a292d;
+  color: #f9f9f9;
+  border: 2px solid #2a292d;
+  font-family: 'Open Sans', sans-serif;
+}
+#nextTurn {
+  opacity: 0.0;
+  margin-left: 47.5%;
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3%;
+    background-color: #2a292d;
+    transition: all 0.3s cubic-bezier(0,0,0,0.75);
+    color: white;
+    text-align: center;
+}
+.footer:hover {
+    transform: translateY(-25%);
+}
+#footer {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #2a292d;
+  color: #f9f9f9;
+}
