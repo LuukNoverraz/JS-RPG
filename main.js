@@ -28,7 +28,7 @@ function changeHpValue() {
   var hpValuePrompt = prompt("Enter new amount of HP");
   intHp = Number(hpValuePrompt);
   if (intHp < 10) {
-    alert("It is not recommended to set the hp value under 10.");
+    alert("You can not set the hp value under 10.");
   }
   else if (isNaN(intHp) == false) {
     document.getElementById("hpValue").innerHTML = "HP: " + intHp;
@@ -42,7 +42,10 @@ function changeHpValue() {
 function changeMaxDamageValue() {
   var maxDamageValuePrompt = prompt("Enter new amount of maximum damage per attack");
   intMaxDamage = Number(maxDamageValuePrompt);
-  if (isNaN(intMaxDamage) == false) {
+  if (intMaxDamage < 2) {
+    alert("You can not set the maximum damage value under 2.");
+  }
+  else if (isNaN(intMaxDamage) == false) {
     document.getElementById("maxDamageValue").innerHTML = "Maximum damage per attack: " + intMaxDamage;
   }
   else {
