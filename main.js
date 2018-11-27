@@ -8,6 +8,22 @@ var intHp = 100;
 var intMaxDamage = 30;
 document.getElementById("p1").innerHTML = player1Name;
 document.getElementById("p2").innerHTML = player2Name;
+function hover(element) {
+  if (dark == false) {
+    element.setAttribute('src', 'images/moon-32-hover.png');
+  }
+  else {
+    element.setAttribute('src', 'images/sun-32-hover.png');
+  }
+}
+function unhover(element) {
+  if (dark == false) {
+    element.setAttribute('src', 'images/moon-32.png');
+  }
+  else {
+      element.setAttribute('src', 'images/sun-32.png');
+  }
+}
 function darkTheme() {
   if (dark == true) {
     dark = false
