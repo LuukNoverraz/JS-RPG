@@ -6,8 +6,15 @@ var dark = false;
 var healing = true;
 var intHp = 100;
 var intMaxDamage = 30;
+
 document.getElementById("p1").innerHTML = player1Name;
 document.getElementById("p2").innerHTML = player2Name;
+
+var deathList1 = [player2Name + "'s absolute rage.", "being killed by" + player2Name + ". Pretty simple really.", player2Name + "'s epicness.", "not being christian","bees?", "beans in places they don't belong.", "bread stapled to trees.", "my cat", "unepicness. NOOB!", "death", "dying", "the big gay", "not having a rank on various Minecraft servers.", "not having a skin in fortnite."];
+var deathList2 = [player1Name + "'s absolute rage.", "being killed by" + player1Name + ". Pretty simple really.", player1Name + "'s epicness.", "not being christian","bees?", "beans in places they don't belong.", "bread stapled to trees.", "my cat", "unepicness. NOOB!", "death", "dying", "the big gay", "not having a rank on various Minecraft servers.", "not having a skin in fortnite."];
+var randomDeath1 = deathList1[Math.floor(Math.random() * deathList1.length)];
+var randomDeath2 = deathList2[Math.floor(Math.random() * deathList2.length)];
+
 function hover(element) {
   if (dark == false) {
     element.setAttribute('src', 'images/moon-32-hover.png');
@@ -26,18 +33,18 @@ function unhover(element) {
 }
 function darkTheme() {
   if (dark == true) {
-    dark = false
+    dark = false;
     //Back to the light theme
     document.getElementById("darkTheme").src = "images/moon-32.png";
     document.getElementById("css").href = "style/style.css";
-    document.getElementById("github").src = "images/github-icon.png"
+    document.getElementById("github").src = "images/github-icon.png";
   }
   else if (dark == false) {
     dark = true;
     //Change to dark theme
     document.getElementById("darkTheme").src = "images/sun-32.png";
     document.getElementById("css").href = "style/darkstyle.css";
-    document.getElementById("github").src = "images/github-icon-dark.png"
+    document.getElementById("github").src = "images/github-icon-dark.png";
   }
 }
 function changeHpValue() {
@@ -47,7 +54,7 @@ function changeHpValue() {
     alert("You can not set the hp value under 10.");
   }
   else if (intHp > 200) {
-    alert("Setting the HP that high is a bit excessive, is it not?")
+    alert("Setting the HP that high is a bit excessive, is it not?");
   }
   else if (isNaN(intHp) == false) {
     document.getElementById("hpValue").innerHTML = "HP: " + intHp;
@@ -65,7 +72,7 @@ function changeMaxDamageValue() {
     alert("You can not set the maximum damage value under 2.");
   }
   else if (intHp - intMaxDamage < 0) {
-    alert("You can not set the maximum damage value above the HP value.")
+    alert("You can not set the maximum damage value above the HP value.");
   }
   else if (isNaN(intMaxDamage) == false) {
     document.getElementById("maxDamageValue").innerHTML = "Maximum damage per attack: " + intMaxDamage;
@@ -104,7 +111,6 @@ function gameStart() {
       document.getElementById("inputBar").style.opacity = 1.0;
     }
   }, 2000);
-
 }
 function useAttack() {
   var attackValue = document.getElementById("attackName").value;
@@ -119,7 +125,7 @@ function useAttack() {
       document.getElementById("player2Hp").innerHTML = Number(document.getElementById("player2Hp").innerHTML) - damageValue;
       document.getElementById("nextTurn").style.opacity = 1.0;
       document.getElementById("nextButton").style.opacity = 1.0;
-      console.log(document.getElementById("player2Hp"))
+      console.log(document.getElementById("player2Hp"));
       randomFirstPlayer = 2;
     }
     else if (randomFirstPlayer == 2 && player2Turn == true) {
@@ -130,7 +136,7 @@ function useAttack() {
       document.getElementById("player1Hp").innerHTML = Number(document.getElementById("player1Hp").innerHTML) - damageValue;
       document.getElementById("nextTurn").style.opacity = 1.0;
       document.getElementById("nextButton").style.opacity = 1.0;
-      console.log(document.getElementById("player1Hp"))
+      console.log(document.getElementById("player1Hp"));
       randomFirstPlayer = 1;
     }
   }
@@ -139,8 +145,11 @@ function useAttack() {
   }
 }
 function turnDone() {
-  if (Number(document.getElementById("player1Hp").innerHTML) <= 0 || Number(document.getElementById("player2Hp").innerHTML) <= 0) {
-    alert("Gij bent dood.");
+  if (Number(document.getElementById("player1Hp").innerHTML) <= 0) {
+    alert(player1Name + " died from " + randomDeath1);
+  }
+  else if (Number(document.getElementById("player2Hp").innerHTML) <= 0) {
+    alert(player2Name + " died from " + randomDeath2);
   }
   else if (randomFirstPlayer == 1) {
     document.getElementById("pickFirst").innerHTML = player1Name + " goes next!";
