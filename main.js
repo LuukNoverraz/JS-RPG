@@ -27,14 +27,14 @@ function unhover(element) {
 function darkTheme() {
   if (dark == true) {
     dark = false
-    //Terug naar light theme
+    //Back to the light theme
     document.getElementById("darkTheme").src = "images/moon-32.png";
     document.getElementById("css").href = "style/style.css";
     document.getElementById("github").src = "images/github-icon.png"
   }
   else if (dark == false) {
     dark = true;
-    //Veranderen naar dark theme
+    //Change to dark theme
     document.getElementById("darkTheme").src = "images/sun-32.png";
     document.getElementById("css").href = "style/darkstyle.css";
     document.getElementById("github").src = "images/github-icon-dark.png"
@@ -110,7 +110,7 @@ function useAttack() {
   var attackValue = document.getElementById("attackName").value;
   var damageValue = document.getElementById("damageAmount").value;
   var intDamageValue = Number(damageValue);
-  if (isNaN(intDamageValue) == false && intDamageValue > 0 && intDamageValue <= intMaxDamage) {
+  if (isNaN(intDamageValue) == false && intDamageValue > 0) {
     if (randomFirstPlayer == 1 && player1Turn == true) {
       player1Turn = false;
       player2Turn = true;
