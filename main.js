@@ -46,6 +46,9 @@ function changeHpValue() {
   if (intHp < 10) {
     alert("You can not set the hp value under 10.");
   }
+  else if (intHp > 200) {
+    alert("Setting the HP that high is a bit excessive, is it not?")
+  }
   else if (isNaN(intHp) == false) {
     document.getElementById("hpValue").innerHTML = "HP: " + intHp;
     document.getElementById("player1Hp").innerHTML = intHp;
@@ -60,6 +63,9 @@ function changeMaxDamageValue() {
   intMaxDamage = Number(maxDamageValuePrompt);
   if (intMaxDamage < 2) {
     alert("You can not set the maximum damage value under 2.");
+  }
+  else if (intHp - intMaxDamage < 0) {
+    alert("You can not set the maximum damage value above the HP value.")
   }
   else if (isNaN(intMaxDamage) == false) {
     document.getElementById("maxDamageValue").innerHTML = "Maximum damage per attack: " + intMaxDamage;
