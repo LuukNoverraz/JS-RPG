@@ -17,18 +17,18 @@ var randomDeath2 = deathList2[Math.floor(Math.random() * deathList2.length)];
 
 function hover(element) {
   if (dark == false) {
-    element.setAttribute('src', 'images/moon-32-hover.png');
+    element.setAttribute("src", "images/moon-32-hover.png");
   }
   else {
-    element.setAttribute('src', 'images/sun-32-hover.png');
+    element.setAttribute("src", "images/sun-32-hover.png");
   }
 }
 function unhover(element) {
   if (dark == false) {
-    element.setAttribute('src', 'images/moon-32.png');
+    element.setAttribute("src", "images/moon-32.png");
   }
   else {
-      element.setAttribute('src', 'images/sun-32.png');
+      element.setAttribute("src", "images/sun-32.png");
   }
 }
 function darkTheme() {
@@ -116,7 +116,7 @@ function useAttack() {
   var attackValue = document.getElementById("attackName").value;
   var damageValue = document.getElementById("damageAmount").value;
   var intDamageValue = Number(damageValue);
-  if (isNaN(intDamageValue) == false && intDamageValue > 0) {
+  if (isNaN(intDamageValue) == false && intDamageValue > 0 && intDamageValue - intMaxDamage <= 0) {
     if (randomFirstPlayer == 1 && player1Turn == true) {
       player1Turn = false;
       player2Turn = true;
